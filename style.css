@@ -1,0 +1,577 @@
+:root{
+    --blue-dark: #002970;
+    --blue-light: #00baf2;
+    --font-family: Inter,sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    /* background-color: green; */
+    font-size: var(--font-family);
+}
+
+
+/* Nav Styling */
+#navContainer{
+    background-color: white;
+    height: 5rem;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+#navList{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 1rem; */
+}
+#MainLogo{
+    scale: 1;
+}
+.listOptions{
+    /* font-weight: bold; */
+    font-size: 1.2rem;
+    font-family: Inter,sans-serif;
+}
+#navContainer a{
+    text-decoration: none;
+    color: black;
+}
+#navSignIn{
+    height: 2.5rem;
+    width: 7rem;
+    display: flex;
+    background-color: var(--blue-light);
+    border-radius: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 3.5px; */
+    padding-right: 3px;
+}
+#navSignIn span{
+    color: white;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+#navSignInImg{
+    height: 100%;
+    width: 35%;
+    background-image: url("static/userIconDark.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#navSignIn:hover {
+    background-color: var(--blue-dark);
+}
+#navSignIn:hover #navSignInImg{
+    background-image: url("static/userIcon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* Below Nav Message */
+#mainContainer{
+    margin-top: 5rem;
+}
+
+#messageKYC{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background: linear-gradient(#d5d3d3 0%, #c8c7c7 100%);
+    height: 2.5rem;
+    /* gap: 10px; */
+    font-family: var(--font-family);
+}
+#messageKYCdiv span:nth-child(1){
+    font-weight: bold;
+}
+#messageKYC a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Message Main */
+#messageMain{
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    padding-block: 3rem;
+    padding-inline: 1rem;
+    font-family: var(--font-family);
+}
+#leftBox{
+    width: 35%;
+    height: 30rem;
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    /* gap: 2rem; */
+}
+#iconPayTM{
+    width: 80px;
+}
+#paraDiv>p{
+    font-size: 1.3rem;
+}
+#paraHeading{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+#mobileImage{
+    width: 500px;
+}
+#downloadBox{
+    background-color: var(--blue-light);
+    width: 15rem;
+    height: 2.5rem;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-inline: 0.5rem;
+}
+#downloadBox img{
+    height: 1rem;
+}
+#messageMain a{
+    text-decoration: none;
+}
+#downloadBox:hover{
+    background-color: var(--blue-dark);
+}
+
+/* Recharge Box */
+.rechargeBox{
+    color: white;
+    font-family: var(--font-family);
+    background-color: var(--blue-light);
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.rechargeHeader{
+    width: 95%;
+    margin-inline: 3rem;
+}
+.rechargeHeader h1{
+    font-size: 2rem;
+}
+.rechargeIcons{
+    width: 92%;
+    display: flex;
+    margin-inline: auto;
+    /* background-color: gray; */
+    justify-content: space-between;
+    /* gap: 0.5rem; */
+}
+.rechargeCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 12%;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+}
+.rechargeCard img{
+    width: 4rem;
+}
+.rechargeType{
+    font-weight: bold;
+}
+.rechargeCard:hover{
+    background-color: #018bb6;
+    border-radius: 10px;
+}
+
+
+/* BookBuy Box */
+.bookbuyBox{
+    color: white;
+    font-family: var(--font-family);
+    background-color: var(--blue-dark);
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bookbuyHeader{
+    width: 95%;
+    margin-inline: 3rem;
+}
+.bookbuyHeader h1{
+    font-size: 2rem;
+}
+.bookbuyIcons{
+    width: 92%;
+    display: flex;
+    margin-inline: auto;
+    /* background-color: gray; */
+    justify-content: space-between;
+    /* gap: 0.5rem; */
+}
+.bookbuyCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 12%;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+}
+.bookbuyCard img{
+    width: 4rem;
+}
+.bookbuyType{
+    font-weight: bold;
+}
+.bookbuyCard:hover{
+    background-color: #1d417e;
+    border-radius: 10px;
+}
+
+
+/* Instruments Section */
+.instruments{
+    background-color: #eff4fc;
+    /* background-color: #bdd2f1; */
+
+    font-family: var(--font-family);
+    padding-top: 3rem;
+    width: 100vw;
+    padding-bottom: 2rem;
+}
+#insHeader{
+    font-size: 2rem;
+    width: 85vw;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+/* Instruments Div */
+.instrumentsDiv{
+    width: 85vw;
+    background-color: white;
+    margin-inline: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 5rem;
+    /* overflow: hidden; */
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.rightinstrumentsDiv img{
+    width: 33rem;
+}
+.leftinstrumentsDiv{
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: yellow; */
+    width: 40%;
+}
+.leftupperinstrumentsDiv img{
+    width: 5rem;
+}
+.leftupperinstrumentsDiv{
+    display: flex;
+    /* background-color: green; */
+    align-items: center;
+    gap: 1.5rem;
+    line-height: 1.2rem;
+    font-weight: 550;
+}
+
+.leftlowerinstrumentsDiv{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.leftlowerinstrumentsDiv h1{
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+#paraleftlowerinstruments{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#upiLeft{
+    margin-right: 3rem;
+}
+
+/* Banks */
+.banksDiv{
+    /* background-color: yellow; */
+    /* height: 100px; */
+    width: 85vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.bank{
+    border-radius: 10px;
+    width: 47%;
+    background-color: white;
+    position: relative;
+    height: 40rem;
+}
+
+.bankInfo{
+    display: flex;
+    flex-direction: column;
+    margin-inline: 4rem;
+    margin-block: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
+    height: 40%;
+}
+.bankLogoDiv{
+    height: 5rem;
+    position: relative;
+    /* background-color: red; */
+    /* overflow: hidden; */
+}
+.bankInfo img{
+    width: 14rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.bankInfo h1{
+    font-size: 2.5rem;
+}
+.bankInfo p{
+    font-size: 1.2rem;
+}
+.bankImg{
+    width: 30rem;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+}
+
+
+/* Fin Services */
+.finServices{
+    background-color: white;
+    width: 100%;
+    padding-block: 5rem;
+}
+.finHeader{
+    width: 85vw;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+}
+.finHeader h1{
+    font-size: 3.5rem;
+}
+.finServicesCard{
+    width: 85vw;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.finleft{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    width: 40%;
+    /* justify-content: space-between; */
+}
+.finleft img{
+    margin-top: 2rem;
+    width: 15rem;
+}
+.finleft h2{
+    font-size: 3rem;
+}
+.finleft p{
+    font-size: 1.4rem;
+}
+.learnMore{
+    background-color: var(--blue-dark);
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.learnMoreDiv{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 15px;
+    /* font-size: 1px; */
+    font-weight: 500;
+    font-style: var(--font-family);
+    transition: all .8s ease-out .2s;
+}
+.learnMoreDiv p{
+    font-size: 1.2rem;
+}
+.learnmoreSign{
+    font-size: 1.2rem;
+}
+.hyp{
+    display: none;
+}
+.finright img{
+    width: 30rem;
+    /* height: 50%; */
+}
+.learnMore:hover{
+    background-color: var(--blue-light);
+}
+.learnMore:hover .hyp{
+    display: inline;
+}
+
+/* Business Tools */
+
+.busiTool{
+    background-color: #eff4fc;
+    width: 100%;
+    padding-block: 7rem;
+}
+.busiToolHeader{
+    width: 85vw;
+    margin-inline: auto;
+}
+.busiToolHeader h1{
+    font-size: 3rem;
+    width: 40%;
+}
+
+.payTmMoney{
+    /* background-color: yellow; */
+    width: 85vw;
+    margin-inline: auto;
+    display: flex;
+    margin-top: 4rem;
+}
+.leftCard{
+    /* background-color: white; */
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    gap: 4rem;
+    /* justify-content: space-between; */
+    margin-right: 2rem;
+}
+.leftCard img{
+    width: 10rem;
+}
+.leftCard p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+
+}
+.leftCard h3{
+    font-size: 1.4rem;
+    color: var(--blue-light);
+}
+.cardTxt{
+    display: flex;
+    flex-direction: column;
+    /* background-color: green; */
+    height: 60%;
+    gap: 1.5rem;
+    /* justify-content: space-between; */
+
+}
+.rightBar{
+    display: flex;
+    overflow: scroll;
+    gap: 1rem;
+    /* background-color: red; */
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2rem;
+}
+.rightBar img{
+    /* display: none; */
+    width:3rem;
+}
+.barDiv{
+    width: 11rem;
+    height: 90%;
+    background-color: var(--blue-light);
+    border-radius: 6px;
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 6px;
+}
+/* .barDiv img{
+    width: 12rem;
+} */
+.barImgDiv{
+    overflow: hidden;
+    width: 100%;
+    height: 10rem;
+    /* background-color: red; */
+    border-radius: 5px;
+}
+.barImgDiv img{
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    overflow: hidden;
+}
+.barDiv p{
+    font-size: 1.4rem;
+    margin-inline: 10px;
+    text-align: center;
+    /* margin: 1rem; */
+    font-weight: 500;
+    color: white;
+
+}
+
+.barDiv:hover .barImg{
+    scale: 1.1;
+}
